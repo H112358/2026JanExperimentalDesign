@@ -6,6 +6,14 @@ Doughnuts<- read.csv("DOUGHNUTS.csv", header=TRUE, stringsAsFactors=FALSE)
     Doughnuts$Outlet <- as.factor(Doughnuts$Outlet)
 
 # Doughnuts plot
+{
 hist(Doughnuts$Fat)
-    qqnorm(Doughnuts)
-    qqline(Doughnuts$Fat, col = "blue", lwd = 2)
+qqnorm(Doughnuts$Fat)
+qqline(Doughnuts$Fat, col = "blue", lwd = 2)
+boxplot(Doughnuts$Fat~Doughnuts$Outlet)
+}
+
+# ANOVA Doughnuts
+
+aov.Doughnuts <- aov(Fat~Outlet,data=Doughnuts)
+print(TukeyHSD(aov.Doughnuts))
