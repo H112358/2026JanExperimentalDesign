@@ -1,0 +1,6 @@
+Overall summary statistics:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00   16.00   28.00   30.74   40.00   84.00 
+Summary ANOVA MiceNull hypothesis (H0): The mean number of seeds are equal between all sites.
+Alternative hypothesis (H1): At least one site significantly differs in mean number of seeds.
+
